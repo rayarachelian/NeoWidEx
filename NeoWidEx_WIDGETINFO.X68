@@ -54,7 +54,7 @@ WIDGETCHECK:
     TST.B   zIsWidgety               ; Do we have a Widget?
     BNE.S   .rt                      ; Yes, skip ahead to return
     mPrint  kCrtRow,kCrtCol,#kFirstCol,<$0D,'YOU NEED A WIDGET TO DO THAT.'>
-    ADDQ.L  #4,A7                    ; Prepare to bail to the caller's caller
+; DISABLED-RA20190104--    ADDQ.L  #4,A7                    ; Prepare to bail to the caller's caller
 .rt RTS                              ; Return to caller, or caller's caller
 
     ; WIDGETINFO -- Gather information from the $FFFFFF sector
